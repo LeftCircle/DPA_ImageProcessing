@@ -93,3 +93,13 @@ target_link_libraries(image_processing PUBLIC
     GLUT::GLUT
     OpenMP::OpenMP_CXX
 )
+
+if(IMAGE_PROCESSING_BUILD_VIEWER)
+    add_executable(dpa_imgviewer
+        "${CMAKE_CURRENT_SOURCE_DIR}/main.cpp"
+    )
+
+    target_link_libraries(dpa_imgviewer PRIVATE
+        image_processing
+    )
+endif()

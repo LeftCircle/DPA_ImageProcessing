@@ -30,6 +30,7 @@ int main(int argc, char** argv)
 	//---------
 	
 	view->init(argc, argv, img.get_width(), img.get_height());
+	view->display();
 
 	view->main_loop();
 	return 0;
